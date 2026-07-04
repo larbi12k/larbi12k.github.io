@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>QR Code</h2>
+<input id="txt">
+<button onclick="make()">إنشاء</button>
+
+<img id="img">
+
+<script>
+function make(){
+let t = document.getElementById("txt").value;
+document.getElementById("img").src =
+"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + t;
+}
+</script>
+
+</body>
+</html>
