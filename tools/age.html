@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>حاسبة العمر</title>
+</head>
+<body>
+
+<h2>حاسبة العمر</h2>
+
+<input type="date" id="birth">
+<button onclick="calc()">احسب</button>
+
+<p id="res"></p>
+
+<script>
+function calc(){
+let b = new Date(document.getElementById("birth").value);
+let t = new Date();
+let age = t.getFullYear() - b.getFullYear();
+document.getElementById("res").innerText = age + " سنة";
+}
+</script>
+
+</body>
+</html>
