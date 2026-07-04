@@ -1,24 +1,9 @@
-
 function searchTools(){
+let input = document.getElementById("search").value.toLowerCase();
+let cards = document.querySelectorAll(".card");
 
-let input=document.getElementById("search").value.toLowerCase();
-
-let cards=document.querySelectorAll(".card");
-
-cards.forEach(function(card){
-
-let text=card.innerText.toLowerCase();
-
-if(text.includes(input)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
-
-}
-
+cards.forEach(card=>{
+let text = card.innerText.toLowerCase();
+card.style.display = text.includes(input) ? "block" : "none";
 });
-
 }
